@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">💊 Viraj Pharmacy</div>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="medicines.html">Medicines</a>
+    <a href="index.html" onclick="logout()">Logout</a>
+  </nav>
+</header>
+
+<section class="dashboard">
+  <h1>Welcome to Your Dashboard</h1>
+  <div class="dash-grid">
+    <div class="dash-card" onclick="location.href='order-medicines.html'">
+      🩺 Order Medicines
+    </div>
+    
+    <div class="dash-card" onclick="location.href='view-cart.html'">
+      🛒 View Cart
+    </div>
+    
+    <div class="dash-card" onclick="location.href='order-history.html'">
+      📦 Order History
+    </div>
+  </div>
+</section>
+
+<script>
+if (!localStorage.getItem("loggedIn")) {
+  window.location.href = "login.html";
+}
+function logout() {
+  localStorage.removeItem("loggedIn");
+  window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>

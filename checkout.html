@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">💊 Viraj Pharmacy</div>
+</header>
+
+<section class="cart-section">
+  <h1>Order Placed Successfully 🎉</h1>
+  <p>Your medicines will be delivered soon.</p>
+  <button onclick="finish()">Go to Dashboard</button>
+</section>
+
+<script>
+function finish() {
+  const orders = JSON.parse(localStorage.getItem("orders")) || [];
+  const cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+  orders.push({
+    date: new Date().toLocaleString(),
+    items: cart
+  });
+
+  localStorage.setItem("orders", JSON.stringify(orders));
+  localStorage.removeItem("cart");
+
+  window.location.href = "dashboard.html";
+}
+</script>
+
+</body>
+</html>     

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Medicines</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">💊 Viraj Pharmacy</div>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="#">Cart (<span id="count">0</span>)</a>
+  </nav>
+</header>
+
+<section class="grid medicines">
+  <div class="card">
+    <h3>Paracetamol</h3>
+    <p>₹50</p>
+    <button onclick="addCart()">Add to Cart</button>
+  </div>
+  <div class="card">
+    <h3>Vitamin C</h3>
+    <p>₹120</p>
+    <button onclick="addCart()">Add to Cart</button>
+  </div>
+  <div class="card">
+    <h3>Cold Syrup</h3>
+    <p>₹90</p>
+    <button onclick="addCart()">Add to Cart</button>
+  </div>
+</section>
+
+<script src="js/cart.js"></script>
+</body>
+</html>

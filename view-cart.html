@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your Cart</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- LOGIN CHECK -->
+<script>
+  if (!localStorage.getItem("loggedIn")) {
+    window.location.href = "index.html";
+  }
+</script>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">💊 Viraj Pharmacy</div>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="order-medicines.html">Order Medicines</a>
+    <a href="index.html" onclick="logout()">Logout</a>
+  </nav>
+</header>
+
+<!-- CART SECTION -->
+<section class="cart-section">
+  <h1>Your Cart</h1>
+
+  <div id="cartItems"></div>
+
+  <div class="cart-summary">
+    <div id="summary" class="cart-summary"></div>
+    <h2>Total: ₹<span id="totalPrice">0</span></h2>
+    <button class="checkout-btn" onclick="location.href='Checkout.html'">Proceed to Checkout</button>
+  </div>
+</section>
+
+<script src="js/view-cart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</body>
+</html>

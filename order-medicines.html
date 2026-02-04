@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Order Medicines</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- LOGIN CHECK -->
+<script>
+  if (!localStorage.getItem("loggedIn")) {
+    window.location.href = "index.html";
+  }
+</script>
+
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">💊 Viraj Pharmacy</div>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="view-cart.html">Cart 🛒 (<span id="cartCount">0</span>)</a>
+    <a href="index.html" onclick="logout()">Logout</a>
+  </nav>
+</header>
+
+<!-- ORDER MEDICINE SECTION -->
+<section class="order-section">
+  <h1>Order Medicines</h1>
+
+  <div class="medicine-grid">
+
+    <!-- CARD 1 -->
+    <div class="medicine-card">
+      <img src="images/med1.jpg" alt="Paracetamol">
+      <h3>Paracetamol</h3>
+      <p>Fever & Pain Relief</p>
+      <span class="price">₹50</span>
+      <button onclick="addToCart('Paracetamol')">Add to Cart</button>
+    </div>
+
+    <!-- CARD 2 -->
+    <div class="medicine-card">
+      <img src="images/med2.jpg" alt="Vitamin C">
+      <h3>Vitamin C</h3>
+      <p>Immunity Booster</p>
+      <span class="price">₹120</span>
+      <button onclick="addToCart('Vitamin C')">Add to Cart</button>
+    </div>
+
+    <!-- CARD 3 -->
+    <div class="medicine-card">
+      <img src="images/med3.jpg" alt="Cold Syrup">
+      <h3>Cold Syrup</h3>
+      <p>Cough & Cold Relief</p>
+      <span class="price">₹90</span>
+      <button onclick="addToCart('Cold Syrup')">Add to Cart</button>
+    </div>
+
+    <!-- CARD 4 -->
+    <div class="medicine-card">
+      <img src="images/med4.jpg" alt="Pain Relief Gel">
+      <h3>Pain Relief Gel</h3>
+      <p>Muscle & Joint Pain</p>
+      <span class="price">₹150</span>
+      <button onclick="addToCart('Pain Relief Gel')">Add to Cart</button>
+    </div>
+
+  </div>
+</section>
+
+<script src="js/order.js"></script>
+</body>
+</html>

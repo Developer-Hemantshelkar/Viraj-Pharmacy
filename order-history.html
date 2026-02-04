@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Order History</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header class="navbar">
+  <div class="logo">💊 Viraj Pharmacy</div>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+  </nav>
+</header>
+
+<section class="cart-section">
+  <h1>Your Orders</h1>
+  <div id="orders"></div>
+</section>
+<section class="cart-section">
+    <h2>📦 Order History</h2>
+<div id="orderHistory"></div>
+
+
+  </section>
+<script>
+const orders = JSON.parse(localStorage.getItem("orders")) || [];
+const ordersDiv = document.getElementById("orders");
+
+orders.forEach(order => {
+  ordersDiv.innerHTML += `
+    <div class="cart-item">
+      <strong>${order.date}</strong>
+      <span>${order.items.length} items</span>
+    </div>
+  `;
+});
+</script>
+<script src="order-history.js"></script>
+</body>
+</html>

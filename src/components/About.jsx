@@ -41,7 +41,7 @@ const About = () => {
             <div className="container">
                 <div className="about-grid">
                     <div className="about-image glass-card hover-tilt fade-up">
-                        <img src="/assets/images/VP about.png" alt="About Viraj Pharmacy" />
+                        <img src="src/assets/images/about-vp.png" alt="About Viraj Pharmacy" />
                         <div className="experience-badge">
                             <span className="number">Premium</span>
                             <span className="text">Healthcare</span>

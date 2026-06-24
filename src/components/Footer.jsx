@@ -46,7 +46,7 @@ const Footer = () => {
                             </li>
                             <li>
                                 <i className="fa-solid fa-envelope"></i>
-                                <a href="mailto:info@virajpharmacy.com">info@virajpharmacy.com</a>
+                                <a href="mailto:rupeshbadgujar777@gmail.com">rupeshbadgujar777@gmail.com</a>
                             </li>
                         </ul>
                     </div>

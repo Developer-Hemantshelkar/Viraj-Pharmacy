@@ -8,18 +8,45 @@ const Contact = () => {
         setFormData({ ...formData, [e.target.id]: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
         if (formData.name && formData.phone && formData.message) {
             setStatus('sending');
-            // Simulate sending
-            setTimeout(() => {
-                setStatus('sent');
-                setFormData({ name: '', phone: '', message: '' });
-                setTimeout(() => {
+
+            try {
+                const response = await fetch("https://api.web3forms.com/submit", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        Accept: "application/json",
+                    },
+                    body: JSON.stringify({
+                        access_key: "6be92a5f-68c5-417d-ac3f-5ff81211eb2f", // Replace with your actual key
+                        subject: "New Contact Form Submission from Viraj Pharmacy",
+                        name: formData.name,
+                        phone: formData.phone,
+                        message: formData.message,
+                    }),
+                });
+
+                const result = await response.json();
+
+                if (result.success) {
+                    setStatus('sent');
+                    setFormData({ name: '', phone: '', message: '' });
+                    setTimeout(() => {
+                        setStatus('idle');
+                    }, 3000);
+                } else {
+                    console.error("Submission failed:", result);
                     setStatus('idle');
-                }, 3000);
-            }, 1500);
+                    alert("Something went wrong. Please try again.");
+                }
+            } catch (error) {
+                console.error("Error sending message:", error);
+                setStatus('idle');
+                alert("Something went wrong. Please check your internet connection.");
+            }
         }
     };
 
@@ -45,8 +72,8 @@ const Contact = () => {
                                 <label htmlFor="message">Your Message</label>
                                 <textarea id="message" rows="4" value={formData.message} onChange={handleChange} required placeholder="How can we help you?" className="glass-input"></textarea>
                             </div>
-                            <button 
-                                type="submit" 
+                            <button
+                                type="submit"
                                 className="btn btn-primary btn-rect magnetic-btn ripple-btn w-100"
                                 style={status === 'sent' ? { background: 'var(--accent)' } : {}}
                             >

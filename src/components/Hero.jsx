@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
     return (
-        <section id="hero" className="hero section-animate">
+        <section id="home" className="hero section-animate">
             <div className="hero-content">
                 <div className="hero-text fade-up">
                     <h1 className="hero-title">
@@ -15,7 +15,7 @@ const Hero = () => {
                         <a href="#products" className="btn btn-primary btn-rect magnetic-btn">
                             Shop Now
                         </a>
-                        <a href="https://wa.me/919115448547?text=Hello%20Viraj%20Pharmacy,%20I%20would%20like%20to%20order%20medicines." target="_blank" rel="noopener noreferrer" className="btn btn-primary magnetic-btn">
+                        <a href="https://wa.me/919111544854?text=Hello%20Viraj%20Pharmacy,%20I%20would%20like%20to%20order%20medicines." target="_blank" rel="noopener noreferrer" className="btn btn-primary magnetic-btn">
                             <i className="fa-brands fa-whatsapp"></i> WhatsApp Order
                         </a>
                     </div>
@@ -23,7 +23,7 @@ const Hero = () => {
                 <div className="hero-image-container fade-up delay-2">
                     <div className="glass-card float-3d hover-tilt">
                         <div className="glow-border"></div>
-                        <img src="/assets/images/hero VP.png" alt="Viraj Pharmacy Storefront" className="hero-img zoom-anim" />
+                        <img src="src/assets/images/hero-vp-1.png" alt="Viraj Pharmacy Storefront" className="hero-img zoom-anim" />
                     </div>
                     {/* Floating blobs */}
                     <div className="blob blob-1"></div>

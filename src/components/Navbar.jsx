@@ -3,14 +3,14 @@ import React, { useEffect, useState } from 'react';
 const Navbar = ({ toggleTheme, currentTheme }) => {
     const [scrolled, setScrolled] = useState(false);
     const [menuActive, setMenuActive] = useState(false);
-    const [activeSection, setActiveSection] = useState('hero');
+    const [activeSection, setActiveSection] = useState('home');
 
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 50);
 
             const sections = document.querySelectorAll('section');
-            let current = 'hero';
+            let current = 'home';
             sections.forEach(section => {
                 const sectionTop = section.offsetTop;
                 if (window.scrollY >= (sectionTop - 200)) {
@@ -62,7 +62,7 @@ const Navbar = ({ toggleTheme, currentTheme }) => {
                         </button>
                     </li>
                     <li>
-                        <a href="https://wa.me/919115448547?text=Hello%20Viraj%20Pharmacy,%20I%20would%20like%20to%20order%20medicines."
+                        <a href="https://wa.me/919111544854?text=Hello%20Viraj%20Pharmacy,%20I%20would%20like%20to%20order%20medicines."
                             target="_blank" rel="noopener noreferrer" className="btn-whatsapp-nav btn-rect magnetic-btn">
                             <i className="fa-brands fa-whatsapp"></i> Order Now
                         </a>

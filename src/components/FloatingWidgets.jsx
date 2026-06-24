@@ -41,16 +41,16 @@ const FloatingWidgets = () => {
             <div className="scroll-progress-bar" id="scroll-progress" style={{ width: `${scrollProgress}%` }}></div>
 
             {/* Floating WhatsApp Button */}
-            <a href="https://wa.me/919115448547?text=Hello%20Viraj%20Pharmacy,%20I%20would%20like%20to%20order%20medicines."
+            <a href="https://wa.me/919111544854?text=Hello%20Viraj%20Pharmacy,%20I%20would%20like%20to%20order%20medicines."
                 target="_blank" rel="noopener noreferrer" className="floating-whatsapp magnetic-btn" aria-label="Order on WhatsApp">
                 <i className="fa-brands fa-whatsapp"></i>
                 <span className="whatsapp-tooltip">Order on WhatsApp</span>
             </a>
 
             {/* Back to Top Button */}
-            <button 
-                id="backToTop" 
-                className={`back-to-top magnetic-btn ${showBackToTop ? 'visible' : ''}`} 
+            <button
+                id="backToTop"
+                className={`back-to-top magnetic-btn ${showBackToTop ? 'visible' : ''}`}
                 aria-label="Back to Top"
                 onClick={scrollToTop}
             >
@@ -58,8 +58,8 @@ const FloatingWidgets = () => {
             </button>
 
             {/* Custom Cursor Glow */}
-            <div 
-                className="cursor-glow" 
+            <div
+                className="cursor-glow"
                 id="cursor-glow"
                 style={{ left: `${cursorPos.x}px`, top: `${cursorPos.y}px`, display: 'block' }}
             ></div>

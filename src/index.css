@@ -1421,6 +1421,12 @@ textarea {
 
 .back-to-top {
     position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 50px;
+    height: 50px;
+    background: var(--primary);
+    color: #fff;
     border-radius: var(--radius-round);
     display: flex;
     align-items: center;
@@ -1432,6 +1438,8 @@ textarea {
     visibility: hidden;
     transform: translateY(20px);
     transition: all var(--transition-normal);
+    cursor: pointer;
+    border: none;
 }
 
 .back-to-top.visible {

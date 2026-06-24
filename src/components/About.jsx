@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import aboutImg from '../assets/images/about-vp.png';
 
 const About = () => {
     const statsRef = useRef(null);
@@ -41,7 +42,7 @@ const About = () => {
             <div className="container">
                 <div className="about-grid">
                     <div className="about-image glass-card hover-tilt fade-up">
-                        <img src="src/assets/images/about-vp.png" alt="About Viraj Pharmacy" />
+                        <img src={aboutImg} alt="About Viraj Pharmacy" />
                         <div className="experience-badge">
                             <span className="number">Premium</span>
                             <span className="text">Healthcare</span>

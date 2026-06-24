@@ -1,4 +1,9 @@
 import React from 'react';
+import galleryImg1 from '../assets/images/viraj-pharmacy.jpeg';
+// import galleryImg2 from '../assets/images/hero-vp.png';
+// import galleryImg3 from '../assets/images/banner-vp.png';
+// import galleryImg4 from '../assets/images/vp-about.png';
+// import galleryImg5 from '../assets/images/about-vp.png';
 
 const Gallery = () => {
     return (
@@ -11,31 +16,31 @@ const Gallery = () => {
 
                 <div className="masonry-gallery fade-up delay-1">
                     <div className="gallery-item glass-card">
-                        <img src="src/assets/images/viraj-pharmacy.jpeg" alt="Viraj Pharmacy View 1" />
+                        <img src={galleryImg1} alt="Viraj Pharmacy View 1" />
                         <div className="gallery-overlay">
                             <i className="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
                     </div>
                     <div className="gallery-item glass-card">
-                        <img src="src/assets/images/viraj-pharmacy.jpeg" alt="Viraj Pharmacy View 2" />
+                        <img src={galleryImg1} alt="Viraj Pharmacy View 2" />
                         <div className="gallery-overlay">
                             <i className="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
                     </div>
                     <div className="gallery-item glass-card wide">
-                        <img src="src/assets/images/viraj-pharmacy.jpeg" alt="Viraj Pharmacy View 3" />
+                        <img src={galleryImg1} alt="Viraj Pharmacy View 3" />
                         <div className="gallery-overlay">
                             <i className="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
                     </div>
                     <div className="gallery-item glass-card tall">
-                        <img src="src/assets/images/viraj-pharmacy.jpeg" alt="Viraj Pharmacy View 4" />
+                        <img src={galleryImg1} alt="Viraj Pharmacy View 4" />
                         <div className="gallery-overlay">
                             <i className="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
                     </div>
                     <div className="gallery-item glass-card">
-                        <img src="src/assets/images/viraj-pharmacy.jpeg" alt="Viraj Pharmacy View 5" />
+                        <img src={galleryImg1} alt="Viraj Pharmacy View 5" />
                         <div className="gallery-overlay">
                             <i className="fa-solid fa-magnifying-glass-plus"></i>
                         </div>

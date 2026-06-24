@@ -1,4 +1,5 @@
 import React from 'react';
+import heroImg from '../assets/images/hero-vp-1.png';
 
 const Hero = () => {
     return (
@@ -23,7 +24,7 @@ const Hero = () => {
                 <div className="hero-image-container fade-up delay-2">
                     <div className="glass-card float-3d hover-tilt">
                         <div className="glow-border"></div>
-                        <img src="src/assets/images/hero-vp-1.png" alt="Viraj Pharmacy Storefront" className="hero-img zoom-anim" />
+                        <img src={heroImg} alt="Viraj Pharmacy Storefront" className="hero-img zoom-anim" />
                     </div>
                     {/* Floating blobs */}
                     <div className="blob blob-1"></div>
